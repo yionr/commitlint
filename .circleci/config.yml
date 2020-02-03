@@ -36,6 +36,8 @@ commands:
       - run:
           name: Test
           command: yarn test-ci
+          environment:
+            JEST_JUNIT_OUTPUT_DIR: "reports/junit/js-test-results.xml"
   save-cache:
     steps:
       - save_cache:
